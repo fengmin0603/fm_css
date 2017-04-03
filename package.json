@@ -1,0 +1,22 @@
+{
+  "name": "fm_css",
+  "version": "1.0.0",
+  "description": "some demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengmin0603/fm_css.git"
+  },
+  "keywords": [
+    "123"
+  ],
+  "author": "fengmin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengmin0603/fm_css/issues"
+  },
+  "homepage": "https://github.com/fengmin0603/fm_css#readme"
+}

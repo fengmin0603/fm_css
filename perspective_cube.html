@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style rel="stylesheet">
+        .cube{
+            margin:200px;
+            width:200px;
+            height:200px;
+            -webkit-perspective: 300px;
+            -webkit-transform-style: preserve-3d;/*preserve-3d指定元素的子元素在3d空间内定位*/
+            -webkit-perspective-origin: 100% -50%;/*指定用户从哪个方向看过来的*/
+        }
+        .cube>div{
+            position:absolute;
+            width:100px;
+            height:100px;
+            line-height:100px;
+            text-align: center;
+            font-size:60px;
+            color:white;
+        }
+        .middle{
+            /*middle用来展示基准面*/
+            border:1px dashed black;
+            background: transparent;
+        }
+        .front{
+            border:none;
+            background: rgba(0,0,0,.3);
+            -webkit-transform: translateZ(50px);
+        }
+        .back{
+            background: rgba(0,255,0,1);
+            -webkit-transform: translateZ(-50px);
+        }
+        .right{
+            background: rgba(196,0,0,.7);
+            -webkit-transform: rotateY(90deg) translateZ(50px);
+        }
+        .left{
+            background: rgba(0,0,196,.7);
+            -webkit-transform: rotateY(-90deg) translateZ(50px);
+        }
+        .top{
+            background: rgba(196,196,0,.7);
+            -webkit-transform: rotateX(90deg) translateZ(50px);
+        }
+        .bottom{
+            background: rgba(196,0,196,.7);
+            -webkit-transform: rotateX(-90deg) translateZ(50px);
+        }
+
+        /*===========================*/
+        #foo{
+            border-radius:50px;
+            width:50px;
+            height:50px;
+            background: pink;
+            position:absolute;
+            top:0;
+            left:0;
+            -webkit-transition:all 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="middle"></div>
+        <div class="front">1</div>
+        <div class="back">2</div>
+        <div class="right">3</div>
+        <div class="left">4</div>
+        <div class="top">5</div>
+        <div class="bottom">6</div>
+    </div>
+    <div id="foo"></div>
+<script >
+    var f = document.getElementById("foo");
+    document.addEventListener("click",function(ev){
+        f.style.left = (ev.clientX-25)+"px";
+        f.style.top = (ev.clientY-25)+"px";
+    },false)
+
+</script>
+</body>
+</html>
