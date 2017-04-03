@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/fengmin0603/fm_css/issues"
   },
-  "homepage": "https://github.com/fengmin0603/fm_css#readme"
+  "homepage": "https://github.com/fengmin0603/fm_css#readme",
+  "devDependencies": {
+    "webpack": "^2.3.3"
+  }
 }
